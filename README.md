@@ -205,5 +205,4 @@ python run.py
 
 - Keep your computer / server powered on and online between 10:00 and 10:30, or deploy to a cloud server.
 - The first run may consume more API tokens because it has no history. Subsequent runs only process new papers.
-- All source code comments are in English as requested.
 - Do not commit `.env` or `data/*.db` to GitHub. They are already listed in `.gitignore`.
