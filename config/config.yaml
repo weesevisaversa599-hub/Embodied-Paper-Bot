@@ -1,0 +1,68 @@
+arxiv:
+  queries:
+    - "embodied intelligence"
+    - "vision-language-action robot"
+    - "vision language action model"
+    - "robotic manipulation learning"
+    - "robot navigation large model"
+    - "diffusion policy robot"
+    - "world model robot"
+    - "sim-to-real robot"
+    - "humanoid robot learning"
+    - "robot reasoning planning"
+  max_results_per_query: 30
+  lookback_days: 1
+  candidate_pool_size: 12
+
+llm:
+  provider: deepseek
+  api_key: ${DEEPSEEK_API_KEY}
+  model: deepseek-v4-pro
+  base_url: https://api.deepseek.com/v1
+  temperature: 0.3
+  max_retries: 3
+
+classification:
+  method_tags:
+    - RL
+    - ImitationLearning
+    - DiffusionPolicy
+    - WorldModel
+    - Reasoning
+    - FoundationModel
+    - Sim2Real
+    - DataScaling
+  task_tags:
+    - VLA
+    - Manipulation
+    - Navigation
+    - Locomotion
+    - HRI
+  hot_directions:
+    - End-to-End VLA
+    - VLM-as-Planner
+    - Diffusion / Flow Policy
+    - 3D Scene Understanding
+    - Data Engine / Scaling
+    - Sim-to-Real Transfer
+    - Safety & Robustness
+    - Real-World Low-Cost Deployment
+
+push:
+  max_papers_per_day: 3
+  channel: feishu               # options: pushplus / feishu / claw
+  # pushplus_token: ${PUSHPLUS_TOKEN}
+  feishu_webhook_url: ${FEISHU_WEBHOOK_URL}
+  # feishu_secret: ${FEISHU_SECRET}            # optional, for signature verification
+  # claw_webhook_url: "http://localhost:18789/api/sessions/main/messages"
+  # claw_payload_template: '{"role":"user","content":"{title}\n\n{content}"}'
+  # claw_headers: {"Content-Type":"application/json"}
+
+schedule:
+  fetch_time: "10:00"
+  push_time: "10:30"
+  timezone: Asia/Shanghai
+
+paths:
+  data_dir: data
+  logs_dir: logs

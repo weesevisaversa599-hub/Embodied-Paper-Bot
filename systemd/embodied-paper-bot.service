@@ -1,0 +1,15 @@
+[Unit]
+Description=Embodied AI Daily Paper Bot
+After=network.target
+
+[Service]
+Type=simple
+User=YOUR_USERNAME
+WorkingDirectory=/home/YOUR_USERNAME/embodied-paper-bot
+EnvironmentFile=/home/YOUR_USERNAME/embodied-paper-bot/.env
+ExecStart=/home/YOUR_USERNAME/embodied-paper-bot/.venv/bin/python /home/YOUR_USERNAME/embodied-paper-bot/run.py
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,15 @@
+version: "3.8"
+
+services:
+  embodied-paper-bot:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    container_name: embodied-paper-bot
+    restart: unless-stopped
+    env_file:
+      - .env
+    volumes:
+      - ./data:/app/data
+      - ./logs:/app/logs
+      - ./config:/app/config
