@@ -161,6 +161,8 @@ schedule:
 
 Kimi Claw's local messages API is available only when **Kimi Desktop** is running on the same machine.
 
+The default API port is usually `18789`, but it may differ depending on your Kimi Desktop version and settings. Check your Kimi Desktop "OpenClaw Gateway" settings for the exact messages endpoint.
+
 ```yaml
 push:
   channel: claw

@@ -161,6 +161,8 @@ schedule:
 
 Kimi Claw 的本地消息 API 需要 **Kimi Desktop 桌面版** 在运行，并且和 bot 在同一台机器上。
 
+默认 API 端口通常是 `18789`，但具体端口取决于你的 Kimi Desktop 版本和设置。请在 Kimi Desktop 的「OpenClaw Gateway」设置里查看实际的消息 API 端点。
+
 ```yaml
 push:
   channel: claw
